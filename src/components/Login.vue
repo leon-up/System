@@ -57,7 +57,7 @@ export default {
         this.$refs.loginFormRes.validate(async valid => {
           if(!valid) return;
           const {data: res} = await this.$http.post("login", this.LoginForm)
-          if(res.meta.status !== 200) return this.$message.error('登录失败!');
+          if(res.meta.status !== 200) return this.$message.error('登录失败！')
           this.$message.success('登录成功!')
           //将登录成功之后的 token 保存到客户端的 sessionStorage 中
           window.sessionStorage.setItem('token', res.data.token);
@@ -82,7 +82,7 @@ export default {
   width: 450px;
   height: 300px;
   background-color: #fff;
-  border-radius: 3pxx;
+  border-radius: 3px;
   transform: translate(-50%, -50%);
 
   .avatar_box {
